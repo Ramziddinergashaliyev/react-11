@@ -9,10 +9,12 @@ function Products() {
   const [products, setProducts] = useState(null);
   const [offset, setOfset] = useState(1);
   const [loading, setLoading] = useState(false);
+  const [load, setload] = useState(false);
   let limit = 8;
 
   useEffect(() => {
     setLoading(true);
+    setload(true);
     axios
       .get(`products`, {
         params: {
@@ -21,7 +23,10 @@ function Products() {
       })
       .then((res) => setProducts(res.data))
       .catch((err) => console.log(err))
-      .finally(() => setLoading(false));
+      .finally(() => {
+        setLoading(false);
+        setload(false);
+      });
   }, [offset]);
 
   let productsData = products?.map((el) => (
@@ -49,7 +54,11 @@ function Products() {
       </div>
       <div className="products__cards">{productsData}</div>
       {loading ? <Loading /> : <></>}
-      <button className="products__btn" onClick={() => setOfset((p) => p + 1)}>
+      <button
+        disabled={load}
+        className="products__btn"
+        onClick={() => setOfset((p) => p + 1)}
+      >
         View All Products
       </button>
     </section>

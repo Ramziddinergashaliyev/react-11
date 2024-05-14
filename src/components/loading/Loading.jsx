@@ -12,7 +12,9 @@ function Loading() {
     </div>
   );
   return (
-    <div className="loading__wrapper container">
+    <div className="loading__wrapper">
+      {loadingCards}
+      {loadingCards}
       {loadingCards}
       {loadingCards}
       {loadingCards}
