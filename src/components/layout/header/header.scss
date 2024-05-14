@@ -1,0 +1,172 @@
+.header__top {
+  background-color: black;
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px;
+    flex-wrap: wrap;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 200px;
+  }
+  &__text {
+    //styleName: Title/14PX Regular;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    color: white;
+  }
+
+  &__link {
+    color: white;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  &__select {
+    padding: 5px 20px;
+    background: black;
+    color: white;
+    border: none;
+    outline: none;
+  }
+}
+
+.header {
+  margin-bottom: 40px !important;
+  border-bottom: 1px solid gray;
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px 0px;
+  }
+
+  &__nav__logo {
+    a {
+      font-family: Inter;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: 0.03em;
+      text-align: left;
+    }
+  }
+
+  &__nav__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__nav__icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__nav__form {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 6px;
+    border-radius: 6px;
+    input {
+      padding: 5px;
+      border: none;
+      outline: none;
+      background: transparent;
+    }
+  }
+
+  &__nav__link {
+    //styleName: Title/16PX Regular;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  &__nav__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    color: red;
+    cursor: pointer;
+    display: none;
+  }
+
+  &__nav__menu {
+    font-size: 28px;
+    display: none;
+    cursor: pointer;
+  }
+
+  .active {
+    color: red;
+  }
+  @media (max-width: 930px) {
+    &__top__left {
+      padding-left: 0;
+    }
+  }
+  @media (max-width: 780px) {
+    &__nav__item {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100vh;
+      box-shadow: 1px 1px 10px gray;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: white;
+      transition: 1s;
+      z-index: 999;
+    }
+
+    &__nav__menu {
+      display: block;
+    }
+
+    &__show-list {
+      left: 0;
+    }
+
+    &__nav__close {
+      display: block;
+    }
+
+    &__top__select {
+      display: none;
+    }
+  }
+  @media (max-width: 500px) {
+    &__nav__form {
+      display: none;
+    }
+
+    &__top__text {
+      text-align: center;
+    }
+    &__top__link {
+      margin: 0 auto;
+    }
+  }
+}

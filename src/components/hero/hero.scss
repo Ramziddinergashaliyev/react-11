@@ -1,0 +1,66 @@
+.hero {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+
+  &__left {
+    width: 30%;
+  }
+  &__left__mobile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__left__mobile__text {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    color: white;
+  }
+
+  &__left__title {
+    font-family: Inter;
+    font-size: 48px;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.04em;
+    text-align: left;
+    padding: 10px 0px;
+  }
+
+  &__right {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__left__link {
+    a {
+      //styleName: Title/16PX Medium;
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      text-align: center;
+      color: #fafafa;
+    }
+  }
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    gap: 30px;
+    &__right,
+    &__left {
+      width: 100%;
+    }
+  }
+  @media (max-width: 450px) {
+    &__left__title {
+      font-size: 30px;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.service {
+  margin-top: 40px;
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+
+  &__card {
+    text-align: center;
+    box-shadow: 1px 1px 10px #aaa2;
+    padding: 30px;
+    border-radius: 10px;
+  }
+
+  &__card__title {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 0px;
+  }
+
+  &__card__desc {
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: center;
+  }
+
+  @media (max-width: 1050px) {
+    &__cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    &__cards {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 20px;
+    }
+  }
+
+  @media (max-width: 380px) {
+    &__card__title {
+      font-size: 14px;
+    }
+  }
+}

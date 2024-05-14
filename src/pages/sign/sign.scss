@@ -1,0 +1,135 @@
+.login {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 120px;
+  align-items: center;
+  background-color: white;
+  box-shadow: 1px 1px 10px gray;
+  width: 100%;
+  margin: 40px 0px;
+  &__left {
+    img {
+      width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__title {
+    font-family: Inter;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    padding: 20px 0px;
+  }
+
+  .forget__btn {
+    padding: 5px 30px;
+    color: red;
+    border: 1px solid transparent;
+    background: transparent;
+  }
+
+  .forget__btn:hover {
+    background-color: white;
+    color: #db4444;
+    border: 1px solid #db4444;
+    transition: 0.7s;
+  }
+
+  &__desc {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    padding-bottom: 20px;
+  }
+
+  &__btns {
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__btn {
+    padding: 10px 30px;
+    background-color: #db4444;
+    color: white;
+    border: 1px solid #db4444;
+  }
+
+  &__btn:disabled {
+    opacity: 0.8;
+    cursor: no-drop;
+  }
+
+  // &__btn:hover {
+  //   padding: 10px 30px;
+  //   background-color: white;
+  //   color: #db4444;
+  //   border: 1px solid #db4444;
+  //   transition: 0.7s;
+  // }
+
+  &__right {
+    width: 80%;
+  }
+}
+
+.forget__btn {
+  color: #db4444;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  padding: 0px 30px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  input {
+    border: none;
+    outline: none;
+    padding: 10px 0px;
+    border-bottom: 1px solid gray;
+  }
+}
+
+@media (max-width: 950px) {
+  .login {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__left {
+      img {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .login__title {
+    font-size: 22px;
+  }
+
+  .login__btns {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .forget__btn {
+    padding: 0;
+  }
+}
