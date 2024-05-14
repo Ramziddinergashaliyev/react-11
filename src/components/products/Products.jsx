@@ -22,7 +22,7 @@ function Products() {
       .then((res) => setProducts(res.data))
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
-  }, []);
+  }, [offset]);
 
   let productsData = products?.map((el) => (
     <div key={el.id} className="products__card">
